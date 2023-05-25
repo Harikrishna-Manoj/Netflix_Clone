@@ -13,18 +13,20 @@ class ScreenMainPage extends StatelessWidget {
     const ScreenNewAndHot(),
     const ScreenFastLaugh(),
     const ScreenSearch(),
-    const ScreenDownload()
+    ScreenDownload()
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ValueListenableBuilder(
-        valueListenable: indexChangeNotifer,
-        builder: (context, int index, _) {
-          return _pages[index];
-        },
+      body: SafeArea(
+        child: ValueListenableBuilder(
+          valueListenable: indexChangeNotifer,
+          builder: (context, int index, _) {
+            return _pages[index];
+          },
+        ),
       ),
-      bottomNavigationBar: BottomNavigationWidget(),
+      bottomNavigationBar: const BottomNavigationWidget(),
     );
   }
 }
