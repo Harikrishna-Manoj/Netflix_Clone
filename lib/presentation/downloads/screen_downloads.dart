@@ -19,6 +19,7 @@ class ScreenDownload extends StatelessWidget {
           child: AppBarWidget(title: "Downloads"),
         ),
         body: ListView.separated(
+            physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.all(10),
             itemBuilder: (context, index) => _widgetList[index],
             separatorBuilder: (context, index) => const SizedBox(
