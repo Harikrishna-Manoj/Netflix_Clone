@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/constants/constants.dart';
 import 'package:netflix/presentation/home/widget/background_card.dart';
-import 'package:netflix/presentation/home/widget/home_page_main_buttons.dart';
 import 'package:netflix/presentation/home/widget/number_card.dart';
 import '../common_widget/home_card.dart';
 
