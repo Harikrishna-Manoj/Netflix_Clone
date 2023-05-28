@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../core/colors/colors.dart';
 import '../../../core/constants/constants.dart';
 import '../../home/widget/home_page_main_buttons.dart';
-import 'hot_page_stack.dart';
+import '../../common_widget/video_widget.dart';
 
 class ComingSoonWidget extends StatelessWidget {
   const ComingSoonWidget({
@@ -42,7 +42,7 @@ class ComingSoonWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              hotPageStackImage(context),
+              const VideoWidget(),
               SizedBox(
                 width: width - 50,
                 child: const Row(

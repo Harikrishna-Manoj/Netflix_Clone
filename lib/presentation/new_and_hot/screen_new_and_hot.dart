@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/core/colors/colors.dart';
-import 'package:netflix/presentation/home/widget/home_page_main_buttons.dart';
-import 'package:netflix/presentation/new_and_hot/widget/coming_soon.dart';
+import 'package:netflix/core/constants/constants.dart';
+import 'package:netflix/presentation/new_and_hot/widget/coming_soon_widget.dart';
+import 'package:netflix/presentation/new_and_hot/widget/everyone_watching_widget.dart';
 import 'package:netflix/presentation/new_and_hot/widget/hot_appbar.dart';
+import 'package:netflix/presentation/common_widget/video_widget.dart';
 
-import '../../core/constants/constants.dart';
+import '../../core/colors/colors.dart';
+import '../home/widget/home_page_main_buttons.dart';
 
 class ScreenNewAndHot extends StatelessWidget {
   const ScreenNewAndHot({super.key});
@@ -58,5 +60,11 @@ _buildComingSoon() {
 }
 
 buildEveryoneIsWatching(BuildContext context) {
-  return Center();
+  return Padding(
+      padding: const EdgeInsets.only(right: 5.0, left: 5, top: 10),
+      child: ListView.builder(
+        itemBuilder: (context, index) => const EveryoneWatching(),
+        itemCount: 10,
+        physics: const BouncingScrollPhysics(),
+      ));
 }
