@@ -72,7 +72,7 @@ class DownloadImageWidget extends StatelessWidget {
           height: size.height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.red,
+            color: Colors.grey,
             image: DecorationImage(
               fit: BoxFit.cover,
               image: NetworkImage(image),

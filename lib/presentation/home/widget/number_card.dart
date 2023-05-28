@@ -18,7 +18,7 @@ class NumberOverlapCard extends StatelessWidget {
           child: Container(
             width: size * 0.35,
             decoration: BoxDecoration(
-                color: Colors.red,
+                color: Colors.grey,
                 borderRadius: BorderRadius.circular(5),
                 image: const DecorationImage(
                     fit: BoxFit.cover, image: NetworkImage(imageUrl))),
@@ -28,7 +28,7 @@ class NumberOverlapCard extends StatelessWidget {
           top: 70,
           left: 15,
           child: BorderedText(
-            strokeWidth: 1.5,
+            strokeWidth: 4,
             strokeColor: Colors.white,
             child: Text(
               "${index + 1}",

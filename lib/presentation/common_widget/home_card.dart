@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/presentation/common_widget/mian_title.dart';
 import '../../core/constants/constants.dart';
-import '../home/card_view.dart';
+import '../home/widget/card_view.dart';
 
 class MainTileCard extends StatelessWidget {
   const MainTileCard({

@@ -13,7 +13,7 @@ class CardView extends StatelessWidget {
       child: Container(
         width: size * 0.35,
         decoration: BoxDecoration(
-            color: Colors.red,
+            color: Colors.grey,
             borderRadius: BorderRadius.circular(5),
             image: const DecorationImage(
                 fit: BoxFit.cover, image: NetworkImage(imageUrl))),
