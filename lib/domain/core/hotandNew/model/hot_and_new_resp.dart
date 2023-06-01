@@ -27,15 +27,19 @@ class HotAndNewData {
   @JsonKey(name: 'backdrop_path')
   String? backdropPath;
 
-  num? id;
+  @JsonKey(name: 'id')
+  int? id;
+
   @JsonKey(name: 'original_language')
   String? originalLanguage;
+
   @JsonKey(name: 'name')
   String? name;
+
   @JsonKey(name: 'original_title')
   String? originalTitle;
-  String? overview;
 
+  String? overview;
   @JsonKey(name: 'poster_path')
   String? posterPath;
   @JsonKey(name: 'release_date')

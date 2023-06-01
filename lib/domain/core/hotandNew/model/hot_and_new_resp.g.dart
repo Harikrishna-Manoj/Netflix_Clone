@@ -24,7 +24,7 @@ Map<String, dynamic> _$HotAndNewRespToJson(HotAndNewResp instance) =>
 HotAndNewData _$HotAndNewDataFromJson(Map<String, dynamic> json) =>
     HotAndNewData(
       backdropPath: json['backdrop_path'] as String?,
-      id: json['id'] as num?,
+      id: json['id'] as int?,
       originalLanguage: json['original_language'] as String?,
       originalTitle: json['original_title'] as String?,
       overview: json['overview'] as String?,

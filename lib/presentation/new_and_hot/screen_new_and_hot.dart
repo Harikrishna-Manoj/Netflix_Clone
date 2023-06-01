@@ -42,24 +42,15 @@ class ScreenNewAndHot extends StatelessWidget {
 }
 
 _buildComingSoon() {
-  return ListView.builder(
-    itemBuilder: (context, index) {
-      return const Padding(
-        padding: EdgeInsets.only(top: 10),
-        child: ComingSoonWidget(),
-      );
-    },
-    physics: const BouncingScrollPhysics(),
-    itemCount: 10,
+  return const Padding(
+    padding: EdgeInsets.only(top: 10),
+    child: ComingSoonWidget(),
   );
 }
 
 buildEveryoneIsWatching(BuildContext context) {
-  return Padding(
-      padding: const EdgeInsets.only(right: 5.0, left: 5, top: 10),
-      child: ListView.builder(
-        itemBuilder: (context, index) => const EveryoneWatching(),
-        itemCount: 10,
-        physics: const BouncingScrollPhysics(),
-      ));
+  return const Padding(
+    padding: EdgeInsets.only(right: 5.0, left: 5, top: 10),
+    child: EveryoneWatching(),
+  );
 }

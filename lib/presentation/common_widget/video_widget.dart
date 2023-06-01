@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import '../../core/colors/colors.dart';
 
 class VideoWidget extends StatelessWidget {
-  const VideoWidget({super.key});
-
+  const VideoWidget({super.key, required this.vieoImageUrl});
+  final String vieoImageUrl;
   @override
   Widget build(BuildContext context) {
-    const imageUrl = ("https://www.themoviedb.org/tv/204832");
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Stack(
@@ -16,7 +15,7 @@ class VideoWidget extends StatelessWidget {
           width: width,
           height: height * 0.25,
           child: Image.network(
-            imageUrl,
+            vieoImageUrl,
             fit: BoxFit.cover,
           ),
         ),
