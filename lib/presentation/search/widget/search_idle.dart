@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix/application/search/search_bloc.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/presentation/search/widget/title.dart';
+import 'package:text_scroll/text_scroll.dart';
 import '../../../core/constants/constants.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -71,8 +72,11 @@ class TopSearchItemTile extends StatelessWidget {
               image: DecorationImage(
                   fit: BoxFit.cover, image: NetworkImage(imageUrl)),
             )),
+        kWidth,
         Expanded(
-          child: Text(
+          child: TextScroll(
+            mode: TextScrollMode.endless,
+            velocity: const Velocity(pixelsPerSecond: Offset(30, 0)),
             title,
             style: const TextStyle(
                 color: kWhiteColor, fontWeight: FontWeight.bold, fontSize: 16),
