@@ -1,13 +1,21 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:netflix/application/search/search_bloc.dart';
 import 'package:netflix/core/constants/constants.dart';
+import 'package:netflix/presentation/search/widget/search_idle.dart';
 import 'package:netflix/presentation/search/widget/search_result.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ScreenSearch extends StatelessWidget {
   const ScreenSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      BlocProvider.of<SearchBloc>(context).add(const Initialize());
+    });
     return Scaffold(
         body: SafeArea(
             child: Padding(
@@ -15,6 +23,10 @@ class ScreenSearch extends StatelessWidget {
       child: Column(
         children: [
           CupertinoSearchTextField(
+            onChanged: (value) {
+              BlocProvider.of<SearchBloc>(context)
+                  .add(SearchMovie(movieQuery: value));
+            },
             backgroundColor: Colors.grey.withOpacity(0.3),
             prefixIcon: const Icon(
               CupertinoIcons.search,
@@ -27,9 +39,16 @@ class ScreenSearch extends StatelessWidget {
             style: const TextStyle(color: Colors.white),
           ),
           kHeight,
-          // const Expanded(child: SearchIdleWidget())
-
-          const Expanded(child: SearchResultPage())
+          BlocBuilder<SearchBloc, SearchState>(
+            builder: (context, state) {
+              if (state.searchResultList.isEmpty) {
+                print("${state.idleList}");
+                return Expanded(child: SearchIdleWidget());
+              } else {
+                return Expanded(child: const SearchResultPage());
+              }
+            },
+          ),
         ],
       ),
     )));

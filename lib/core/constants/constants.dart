@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../colors/colors.dart';
 
 const kWidth = SizedBox(width: 10);
@@ -22,3 +21,6 @@ ThemeData appThemeData = ThemeData(
     textTheme: const TextTheme(
         bodyLarge: TextStyle(color: Colors.white),
         bodyMedium: TextStyle(color: Colors.white)));
+
+// imageAppendUrl
+const imageAppendUrl = "https://image.tmdb.org/t/p/w500";
