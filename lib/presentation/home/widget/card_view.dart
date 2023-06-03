@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-const imageUrl = "https://www.themoviedb.org/tv/1622-supernatural";
-
 class CardView extends StatelessWidget {
-  const CardView({super.key});
+  final String imageUrl;
+  const CardView({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class CardView extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.grey,
             borderRadius: BorderRadius.circular(5),
-            image: const DecorationImage(
+            image: DecorationImage(
                 fit: BoxFit.cover, image: NetworkImage(imageUrl))),
       ),
     );

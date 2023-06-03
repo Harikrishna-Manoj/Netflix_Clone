@@ -1,4 +1,3 @@
-// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -19,7 +18,7 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
     /*
      on event get homescren data
      */
-    on<HomePageEvent>((event, emit) async {
+    on<GetHomeScreenData>((event, emit) async {
       // send loading to ui
       emit(state.copyWith(isLoading: true, hasError: false));
 
@@ -45,16 +44,13 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
           final trending = resp.results;
           final dramas = resp.results;
           final southIndian = resp.results;
-          pastYear!.shuffle();
-          trending!.shuffle();
-          dramas!.shuffle();
-          southIndian!.shuffle();
+
           return HomePageState(
             stateId: DateTime.now().millisecondsSinceEpoch.toString(),
-            pastYearMovieList: pastYear,
-            trendingMovieList: trending,
-            tenseMovieList: dramas,
-            southIndianMovieList: southIndian,
+            pastYearMovieList: pastYear!,
+            trendingMovieList: trending!,
+            tenseMovieList: dramas!,
+            southIndianMovieList: southIndian!,
             trendingTvList: state.trendingTvList,
             isLoading: false,
             hasError: false,
@@ -92,9 +88,6 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
 
       //send to  ui
       emit(state2);
-
-      // ignore: todo
-      // TODO: implement event handler
     });
   }
 }

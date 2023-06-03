@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../core/constants/constants.dart';
 import '../../common_widget/mian_title.dart';
 
-const imageUrl = "https://www.themoviedb.org/tv/1622-supernatural";
-
 class NumberOverlapCard extends StatelessWidget {
-  const NumberOverlapCard({super.key, required this.index});
+  const NumberOverlapCard(
+      {super.key, required this.index, required this.imageUrl});
   final int index;
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size.width;
@@ -20,7 +20,7 @@ class NumberOverlapCard extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(5),
-                image: const DecorationImage(
+                image: DecorationImage(
                     fit: BoxFit.cover, image: NetworkImage(imageUrl))),
           ),
         ),
@@ -45,8 +45,10 @@ class NumberOverlapCard extends StatelessWidget {
 }
 
 class NumberCardMainList extends StatelessWidget {
-  const NumberCardMainList({super.key, required this.title});
+  const NumberCardMainList(
+      {super.key, required this.title, required this.imageList});
   final String title;
+  final List imageList;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size.width;
@@ -64,9 +66,10 @@ class NumberCardMainList extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               children: List.generate(
-                  20,
+                  imageList.length,
                   (index) => NumberOverlapCard(
                         index: index,
+                        imageUrl: imageList[index],
                       )),
             ),
           )

@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../core/colors/colors.dart';
 import 'home_page_main_buttons.dart';
 
-const imageUrl =
-    "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ieyUpr5ES9QEz1cn4clCnBf9XJl.jpg";
-
 class BackgroundCard extends StatelessWidget {
-  const BackgroundCard({super.key});
-
+  const BackgroundCard({super.key, required this.imageUrl});
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size.height;
@@ -18,7 +15,7 @@ class BackgroundCard extends StatelessWidget {
         Container(
           width: double.infinity,
           height: size * 0.75,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               color: Colors.grey,
               image: DecorationImage(
                   fit: BoxFit.cover, image: NetworkImage(imageUrl))),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:netflix/application/hot_and_new/hot_and_new_bloc.dart';
 import '../../../core/colors/colors.dart';
 import '../../../core/constants/constants.dart';
-import '../../common_widget/video_widget.dart';
 import '../../home/widget/home_page_main_buttons.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class EveryoneWatching extends StatelessWidget {
@@ -35,7 +35,7 @@ class EveryoneWatching extends StatelessWidget {
           );
         } else {
           return ListView.builder(
-              physics:const  BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               itemCount: state.everyOneIsWatchingList.length,
               shrinkWrap: true,
               itemBuilder: (BuildContext context, index) {

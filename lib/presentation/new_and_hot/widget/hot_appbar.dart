@@ -24,10 +24,13 @@ class HotPageAppbar extends StatelessWidget {
             size: 28,
           ),
           kWidth,
-          Container(
+          SizedBox(
             width: 28,
-            height: 28,
-            color: Colors.blue,
+            height: 26,
+            child: Image.asset(
+              "assets/Netflix-avatar.png",
+              fit: BoxFit.cover,
+            ),
           ),
           kWidth,
         ],

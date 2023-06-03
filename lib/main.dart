@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix/application/downloads/downloads_bloc.dart';
 import 'package:netflix/application/fastLaugh/fast_laugh_bloc.dart';
+import 'package:netflix/application/home_page/home_page_bloc.dart';
 import 'package:netflix/application/hot_and_new/hot_and_new_bloc.dart';
 import 'package:netflix/application/search/search_bloc.dart';
 import 'package:netflix/presentation/main_page/screen_main_page.dart';
@@ -24,7 +26,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => getIt<DownloadsBloc>()),
         BlocProvider(create: (context) => getIt<SearchBloc>()),
         BlocProvider(create: (context) => getIt<FastLaughBloc>()),
-        BlocProvider(create: (context) => getIt<HotAndNewBloc>())
+        BlocProvider(create: (context) => getIt<HotAndNewBloc>()),
+        BlocProvider(create: (context) => getIt<HomePageBloc>()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
