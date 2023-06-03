@@ -17,6 +17,8 @@ class BottomNavigationWidget extends StatelessWidget {
               onTap: (index) {
                 indexChangeNotifer.value = index;
               },
+              showUnselectedLabels: false,
+              selectedFontSize: 10,
               selectedItemColor: Colors.white,
               unselectedItemColor: Colors.grey,
               selectedIconTheme: const IconThemeData(color: Colors.white),
