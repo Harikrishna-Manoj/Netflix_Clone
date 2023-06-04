@@ -17,9 +17,9 @@ import '../../../infrastructure/downloads/downloads_repository.dart' as _i6;
 import '../../../infrastructure/hot_and_new_impl.dart' as _i4;
 import '../../../infrastructure/search/search_impl.dart' as _i8;
 import '../../downloads/i_downloads_repo.dart' as _i5;
-import '../../search/search_service.dart' as _i7;
-import '../hotandNew/hot_and_new_services.dart'
-    as _i3; // ignore_for_file: unnecessary_lambdas
+import '../../hotandNew/hot_and_new_services.dart' as _i3;
+import '../../search/search_service.dart'
+    as _i7; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]

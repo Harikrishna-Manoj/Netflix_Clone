@@ -5,8 +5,8 @@ import 'package:dartz/dartz.dart';
 
 import '../domain/core/api_end_points.dart';
 import '../domain/core/failures/main_failure.dart';
-import '../domain/core/hotandNew/hot_and_new_services.dart';
-import '../domain/core/hotandNew/model/hot_and_new_resp.dart';
+import '../domain/hotandNew/hot_and_new_services.dart';
+import '../domain/hotandNew/model/hot_and_new_resp.dart';
 
 @LazySingleton(as: HotAndNewService)
 class HotAndNewImplementation implements HotAndNewService {

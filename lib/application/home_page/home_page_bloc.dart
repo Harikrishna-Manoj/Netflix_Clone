@@ -3,9 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../domain/core/failures/main_failure.dart';
-import '../../domain/core/hotandNew/hot_and_new_services.dart';
-import '../../domain/core/hotandNew/model/hot_and_new_resp.dart';
-
+import '../../domain/hotandNew/hot_and_new_services.dart';
+import '../../domain/hotandNew/model/hot_and_new_resp.dart';
 part 'home_page_event.dart';
 part 'home_page_state.dart';
 part 'home_page_bloc.freezed.dart';

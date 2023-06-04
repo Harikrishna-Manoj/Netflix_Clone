@@ -4,8 +4,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../domain/core/failures/main_failure.dart';
-import '../../domain/core/hotandNew/hot_and_new_services.dart';
-import '../../domain/core/hotandNew/model/hot_and_new_resp.dart';
+import '../../domain/hotandNew/hot_and_new_services.dart';
+import '../../domain/hotandNew/model/hot_and_new_resp.dart';
 
 part 'hot_and_new_event.dart';
 part 'hot_and_new_state.dart';
